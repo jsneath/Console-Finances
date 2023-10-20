@@ -110,3 +110,24 @@ var average = (totalDiff / (totalMonths -1))
 
 console.log(average)
 
+// Calculate greatest increase in P&L
+
+// run for loop for diffence between 1st and 2nd amounts and increase with for loop. 
+// total amount will need to be added to an array of numbers. From here i can then find the biggest num
+
+var arrayOfSums = []
+
+for (let i=0; i < totalMonths -1; i++) {
+  
+    var sumOfEach = (finances[i+1][1] - finances[i][1])
+    arrayOfSums.push(sumOfEach)
+
+}
+
+console.log(arrayOfSums)
+
+let maxNumber = Math.max(...arrayOfSums);
+console.log(maxNumber)
+
+let minNumber = Math.min(...arrayOfSums);
+console.log(minNumber)
