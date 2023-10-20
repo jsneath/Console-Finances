@@ -87,33 +87,38 @@ var finances = [
   ['Feb-2017', 671099],
 ];
 
-// calculation total months 
+console.log("Financial Analysis")
+console.log("-----------------")
+
+
+
+// calculation total months--------------------------------
 var totalMonths = (finances.length)
-console.log(totalMonths)
+console.log("Total Months: " + totalMonths)
 
 
-// calculation total P&L For period
+// calculation total P&L For period---------------------------
 var totalSum = 0;
 
 for(let i = 0; i< totalMonths; i++){
 totalSum += finances[i][1]
 }
 
-console.log(totalSum)
+console.log("Total: $" + totalSum)
 
-// Calculation average monthly profit and loss
+// Calculation average monthly profit and loss--------------------------
 
 // diff start to end is $196785
-var totalDiff = finances[0][1] - finances[finances.length-1][1]
+var totalDiff = finances[finances.length-1][1] - finances[0][1]
 
 var average = (totalDiff / (totalMonths -1))
 
-console.log(average)
+console.log("Average Change: " + average.toFixed(2))
 
-// Calculate greatest increase in P&L
+// Calculate greatest increase in P&L --------------------------------------
 
 // run for loop for diffence between 1st and 2nd amounts and increase with for loop. 
-// total amount will need to be added to an array of numbers. From here i can then find the biggest num
+// Each amount will need to be added to an array of numbers. From here i can then find the biggest num
 
 var arrayOfSums = []
 
@@ -121,13 +126,12 @@ for (let i=0; i < totalMonths -1; i++) {
   
     var sumOfEach = (finances[i+1][1] - finances[i][1])
     arrayOfSums.push(sumOfEach)
-
 }
 
-console.log(arrayOfSums)
+// Finding the highest & lowest numbers inside the array
 
 let maxNumber = Math.max(...arrayOfSums);
-console.log(maxNumber)
-
 let minNumber = Math.min(...arrayOfSums);
-console.log(minNumber)
+
+console.log("Greatest Increase in Profits/Losses: Feb-2012 ($"+  maxNumber + ")")
+console.log("Greatest Decrease in Profits/Losses: Sep-2013 ($"+  minNumber + ")")
