@@ -87,10 +87,12 @@ var finances = [
   ['Feb-2017', 671099],
 ];
 
-
+// calculation total months 
 var totalMonths = (finances.length)
 console.log(totalMonths)
 
+
+// calculation total P&L For period
 var totalSum = 0;
 
 for(let i = 0; i< totalMonths; i++){
@@ -98,3 +100,13 @@ totalSum += finances[i][1]
 }
 
 console.log(totalSum)
+
+// Calculation average monthly profit and loss
+
+// diff start to end is $196785
+var totalDiff = finances[0][1] - finances[finances.length-1][1]
+
+var average = (totalDiff / (totalMonths -1))
+
+console.log(average)
+
