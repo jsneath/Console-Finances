@@ -4,7 +4,7 @@
 
 This project was part of a weekly challenge in my bootcamp. The aim was to practice using Javascript. 
 I was given an array made up of the P&L monthly accounts - 86 months worth. Where i had to perform a few calculations as required and show these resutls clearly in the Console. 
-I 
+
 
 ## Features
 
